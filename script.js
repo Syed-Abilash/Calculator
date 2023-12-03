@@ -1,21 +1,21 @@
 function appendToDisplay(value) {
-    document.getElementById('display').value += value;
-    console.log(( document.getElementById('display').value));
+    document.getElementById('result').value += value;
+    console.log(( document.getElementById('result').value));
    
   }
 function back(){
-  let valueLength=document.getElementById('display').value
-  document.getElementById('display').value= valueLength.slice(0,(valueLength.length)-1);
+  let valueLength=document.getElementById('result').value
+  document.getElementById('result').value= valueLength.slice(0,(valueLength.length)-1);
 }
 
   function clearDisplay() {
-    document.getElementById('display').value = '';
+    document.getElementById('result').value = '';
   }
 
   function calculate() {
     try {
-      document.getElementById('display').value = eval(document.getElementById('display').value);
+      document.getElementById('result').value = eval(document.getElementById('result').value);
     } catch (error) {
-      document.getElementById('display').value = 'Error';
+      document.getElementById('result').value = 'Error';
     }
   }
